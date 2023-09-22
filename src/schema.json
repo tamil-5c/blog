@@ -1,0 +1,99 @@
+{
+    "navbar": {
+      "menuItems": [
+        {
+          "label": "solutions",
+          "url": "/solution"
+        },
+        {
+          "label": "Technology",
+          "url": "/technology"
+        },
+        {
+          "label": "partners",
+          "url": "/partners"
+        },
+        {
+          "label": "prodigi-home",
+          "url": "/homepage"
+        },
+        {
+          "label": "about",
+          "url": "/about"
+        },
+        {
+          "label": "carrers",
+          "url": "/carrers"
+        },
+        {
+          "label": "Resources",
+          "url": "/resources"
+        },
+        {
+          "label": "contact",
+          "url": "/contact"
+        }
+      ]
+    },
+    "sections": {
+      "unseen": {
+        "title": "Unseen Container",
+        "content": "content related to the unseen ",
+        "image": "globe.png"
+      },
+      "learnMore": {
+        "title": "Learn More Section",
+        "content": "content about learn more",
+        "image": "rad-image.jpg"
+      },
+      "about": {
+        "title": "About Section",
+        "subtitle": "Our Story",
+        "content": "about the company",
+        "images": ["logo1.jpg", "logo2.jpg", "logo3.jpg", "logo4.jpg", "earth-footer.jpg"]
+      },
+      "stats": {
+        "title": "Stats Section",
+        "subtitle": "about the stats",
+        "content": ["Stat 1", "Stat 2", "Stat 3", "Stat 4"],
+        "images":"satellite-image"
+      },
+      "inside": {
+        "title": "Inside Section",
+        "subtitle": "Exploring Our World",
+        "content": "This is the content for the Inside section.",
+        "images": ["inside-image1.jpg", "inside-image2.jpg"]
+      },
+      "askUs": {
+        "title": "Ask Us Section",
+        "content": "content about the image we use",
+        "image": "findings-image.jpg"
+      },
+      "vision": {
+        "title": "quote",
+        "author": "kobe bryant",
+        "content": "content for the Vision section.",
+        "image":"footer-image.jpg"
+      },
+      "news": {
+        "title": "News Section",
+        "subtitle": "Latest News",
+        "newsItems": [
+          {
+            "title": "economic times",
+            "content": "content for News 1."
+          },
+          {
+            "title": "tech crunch",
+            "content": "content for News 2."
+          }
+        ]
+      }
+    },
+    "footer": {
+      "title": "Footer Section",
+      "content": "This is the content for the footer section.",
+      "titles": ["option 1", "option 2", "option 3", "option 4", "option 5", "option 6", "option 7", "option 8", "option 9", "option 10", "option 11"]
+    }
+  }
+  

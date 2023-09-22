@@ -1,0 +1,42 @@
+{
+  "name": "prodigi-gy",
+  "version": "1.0.0",
+  "private": true,
+  "description": "prodigi-gy",
+  "author": "tamil-5c",
+  "keywords": [
+    "gatsby"
+  ],
+  "scripts": {
+    "develop": "gatsby develop",
+    "start": "gatsby develop",
+    "build": "gatsby build",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean"
+  },
+  "dependencies": {
+    "@headlessui/react": "^1.7.17",
+    "@heroicons/react": "^2.0.18",
+    "@material-tailwind/react": "^2.1.1",
+    "@react-icons/all-files": "^4.1.0",
+    "gatsby": "^5.12.1",
+    "gatsby-image": "^3.11.0",
+    "gatsby-plugin-image": "^3.12.0",
+    "gatsby-plugin-sharp": "^5.12.0",
+    "gatsby-source-filesystem": "^5.12.0",
+    "gatsby-source-strapi": "^3.3.1",
+    "gatsby-transformer-remark": "^6.12.0",
+    "gatsby-transformer-sharp": "^5.12.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-fast-marquee": "^1.6.0",
+    "react-icons": "^4.11.0",
+    "react-multilevel-dropdown": "^4.0.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.15",
+    "gatsby-plugin-postcss": "^6.12.0",
+    "postcss": "^8.4.29",
+    "tailwindcss": "^3.3.3"
+  }
+}
