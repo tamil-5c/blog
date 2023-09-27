@@ -1,15 +1,16 @@
 import React from 'react'
 import { Link, graphql } from 'gatsby'
 import Marquee from 'react-fast-marquee'
+import Img from 'gatsby-image';
 
-function About({data}) {
-const strapiContent=data.allStrapiAbout.nodes[0]
+function About({ data }) {
+    const strapiContent = data.allStrapiAbout.nodes[0]
 
     return (
         <div className=' bg-black Homepage'>
             <div className='absolute w-full max-w-full flex flex-col items-center bg-transparent' style={{ zIndex: '2', color: 'rgba(255, 255, 255, 0)', top: '0' }}>
                 <div className='w-full max-w-full pt-3 pb-3 ml-auto mr-auto' style={{ width: '79%' }}>
-                    <nav className=' w-full max-w-full justify-around items-center flex relative float-right font-use'>
+                    <nav className=' w-full max-w-full justify-around items-center flex relative float-right font-use nav-md'>
                         <Link to='/Solutions' className=' inline-block ml-6 mr-6 text-base align-top relative uppercase font-semibold hover-effect' style={{ maxWidth: '1200px', color: '#fff', letterSpacing: '2px', padding: '6px 0', lineHeight: '26.6px', textAlign: 'left', backgroundColor: 'rgba(255, 255, 255, 0)' }}>Solutions</Link>
                         <Link to='/Technology' className=' inline-block ml-6 mr-6 text-base align-top relative uppercase font-semibold hover-effect' style={{ maxWidth: '1200px', color: '#fff', letterSpacing: '2px', padding: '6px 0', lineHeight: '26.6px', textAlign: 'left', backgroundColor: 'rgba(255, 255, 255, 0)' }}>Technology</Link>
                         <Link to='/Partners' className=' inline-block ml-6 mr-6 text-base align-top relative uppercase font-semibold hover-effect' style={{ maxWidth: '1200px', color: '#fff', letterSpacing: '2px', padding: '6px 0', lineHeight: '26.6px', textAlign: 'left', backgroundColor: 'rgba(255, 255, 255, 0)' }}>Partners</Link>
@@ -21,15 +22,15 @@ const strapiContent=data.allStrapiAbout.nodes[0]
                                 <div className=' inline-block ml-6 mr-6 text-base align-top relative uppercase font-semibold' style={{ maxWidth: '1200px', color: '#fff', letterSpacing: '2px', padding: '6px 0', lineHeight: '26.6px', textAlign: 'left', backgroundColor: 'rgba(255, 255, 255, 0)' }}>Resources</div>
                             </div>
                             <nav className='navbartoggle'>
-                            <Link to='/Blogs' className='navlinks'>Blogs</Link>
+                                <Link to='/Blogs' className='navlinks'>Blogs</Link>
                                 <Link to='/Newsroom' className='navlinks'>Newsroom</Link>
-                                </nav>
+                            </nav>
                         </div>
                         <Link to='/Contact' className=' inline-block ml-6 mr-6 text-base align-top relative uppercase font-semibold hover-effect' style={{ maxWidth: '1200px', color: '#fff', letterSpacing: '2px', padding: '6px 0', lineHeight: '26.6px', textAlign: 'left', backgroundColor: 'rgba(255, 255, 255, 0)' }}>Contact</Link>
                     </nav>
                 </div>
             </div>
-            <div className='about-home' style={{backgroundImage:`url(${strapiContent.abouthomeimg.localFile.url})`}}>
+            <div className='about-home' style={{ backgroundImage: `url(${strapiContent.abouthomeimg.localFile.url})` }}>
                 <div className='max-w-full ml-auto mr-auto'>
                     <div className='max-w-full relative' style={{ width: '1200px', marginTop: '234px' }}>
                         <h1 className=' uppercase max-w-full mt-0 mb-0 font-semibold font-use' style={{ color: '#fff', letterSpacing: '2px', fontSize: '80px', lineHeight: '100px' }}>{strapiContent.title}</h1>
@@ -41,7 +42,7 @@ const strapiContent=data.allStrapiAbout.nodes[0]
                     </div>
                 </div>
             </div>
-            <div className='passion' style={{backgroundImage:`url(${strapiContent.secimg.localFile.url})`}}>
+            <div className='passion' style={{ backgroundImage: `url(${strapiContent.secimg.localFile.url})` }}>
                 <div className='flex flex-col items-start relative ml-auto mr-auto' style={{ zIndex: '1', maxWidth: '1200px' }}>
                     <h1 className=' uppercase mt-0 mb-0 font-semibold font-use' style={{ color: '#fff', letterSpacing: '2px', fontSize: '50px', lineHeight: '60px' }}>{strapiContent.sectitle}</h1>
                     <h1 className=' uppercase max-w-full mt-0 mb-0 font-semibold font-use' style={{ color: '#fff', letterSpacing: '2px', fontSize: '80px', lineHeight: '100px', width: '1000px' }}>{strapiContent.secsubtitle}</h1>
@@ -378,30 +379,33 @@ const strapiContent=data.allStrapiAbout.nodes[0]
                     </div>
                 </div>
             </div>
-        <div className=' mb-60 relative flex flex-col items-start ml-auto mr-auto' style={{zIndex:'1',maxWidth:'1200px'}}>
-        <h2 className='max-w-full uppercase mt-0 mb-0 font-semibold  font-use' style={{ color: '#fff', letterSpacing: '2px', fontSize: '50px', lineHeight: '60px' }}>partners</h2>
-        <div className='w-full' style={{maxWidth:'1000px',marginTop:'60px',marginLeft:'100px'}}>
-            <div className='logos-container'>
-                <img className='logo-section max-w-full' src={strapiContent.partnerslogo[0].localFile.url}></img>
-                <img className='logo-section max-w-full' src={strapiContent.partnerslogo[1].localFile.url}></img>
-                <img className='logo-section max-w-full' src={strapiContent.partnerslogo[2].localFile.url}></img>
-                <img className='logo-section max-w-full' src={strapiContent.partnerslogo[3].localFile.url}></img>
-                <img className='logo-section max-w-full' src={strapiContent.partnerslogo[4].localFile.url}></img>
-                <img className='logo-section max-w-full' src={strapiContent.partnerslogo[5].localFile.url}></img>
-                <img className='logo-section max-w-full' src={strapiContent.partnerslogo[6].localFile.url}></img>
-                <img className='logo-section max-w-full' src={strapiContent.partnerslogo[7].localFile.url}></img>
-                <img className='logo-section max-w-full' src={strapiContent.partnerslogo[8].localFile.url}></img>
+            <div className=' mb-60 relative flex flex-col items-start ml-auto mr-auto' style={{ zIndex: '1', maxWidth: '1200px' }}>
+                <h2 className='max-w-full uppercase mt-0 mb-0 font-semibold  font-use' style={{ color: '#fff', letterSpacing: '2px', fontSize: '50px', lineHeight: '60px' }}>partners</h2>
+                <div className='w-full' style={{ maxWidth: '1000px', marginTop: '60px', marginLeft: '100px' }}>
+                    <div className='logos-container'>
+                        <img className='logo-section max-w-full' src={strapiContent.partnerslogo[0].localFile.url}></img>
+                        <img className='logo-section max-w-full' src={strapiContent.partnerslogo[1].localFile.url}></img>
+                        <img className='logo-section max-w-full' src={strapiContent.partnerslogo[2].localFile.url}></img>
+                        <img className='logo-section max-w-full' src={strapiContent.partnerslogo[3].localFile.url}></img>
+                        <img className='logo-section max-w-full' src={strapiContent.partnerslogo[4].localFile.url}></img>
+                        <img className='logo-section max-w-full' src={strapiContent.partnerslogo[5].localFile.url}></img>
+                        <img className='logo-section max-w-full' src={strapiContent.partnerslogo[6].localFile.url}></img>
+                        <img className='logo-section max-w-full' src={strapiContent.partnerslogo[7].localFile.url}></img>
+                        <img className='logo-section max-w-full' src={strapiContent.partnerslogo[8].localFile.url}></img>
+                    </div>
+                </div>
             </div>
-        </div>
-        </div>
-        {/* footer section */}
-        <div className='footer section'>
+            {/* footer section */}
+            <div className='footer section'>
                 <div className='relative ml-auto mr-auto' style={{ maxWidth: '1200px' }}>
                     <div className='flex justify-between items-start pb-0 pl-4 pr-4 mb-8' style={{ marginTop: '101px', border: '1px #7c4c4c', borderBottomColor: 'rgba(255, 255, 255, .5)' }}>
                         <div className='flex flex-col items-start'>
                             <div className='uppercase font-semibold font-use' style={{ color: 'rgba(255, 255, 255, .85) ', lineHeight: '48px', fontSize: '40px' }}>{strapiContent.footertitle}</div>
                             <p className=' text-xl leading-8 font-use-one' style={{ color: 'rgba(255, 255, 255, .85)', width: '441px', marginTop: '30px', marginBottom: '30px' }}>{strapiContent.footercontent.data.footercontent}</p>
                             {/* getintouchbutton */}
+                            <button class="btn btn-2 hover-slide-up uppercase">
+                                <span>{strapiContent.getInTouch}</span>
+                            </button>
                             <div className='social-platform font-use'>
                                 <Link to="https://www.facebook.com/5cnetwork" className=' mt-6 mr-6 max-w-full inline-block uppercase text-lg' style={{ color: '#fff', backgroundColor: 'rgba(255, 255, 255, 0)', lineHeight: '26px' }}>
                                     <img src={strapiContent.socialplatform[3].localFile.url} alt='facebook' className='mr-0 max-w-full inline-block align-middle'></img>
@@ -449,7 +453,7 @@ const strapiContent=data.allStrapiAbout.nodes[0]
 
 export default About
 
-export const pageQuery=graphql`
+export const pageQuery = graphql`
 query MyQuery {
     allStrapiAbout {
       nodes {
@@ -524,6 +528,7 @@ query MyQuery {
             url
           }
         }
+        getInTouch
       }
     }
   }

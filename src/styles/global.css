@@ -491,3 +491,107 @@ transition: all 0.4s ease-in;
         width: 50%;
     } */
 }  
+/* button-hover-effects */
+
+::before,
+::after {
+  position: absolute;
+  content: "";
+}
+
+.btn-holder {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 1000px;
+  margin: 10px auto 35px;
+  
+}
+.btn {
+  position: relative;
+  display: inline-block;
+  width: auto; height: auto;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  min-width: 150px;
+  box-sizing: border-box;
+}
+  .btn span {         
+    position: relative;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    top: 0; left: 0;
+    width: 100%;
+    padding: 15px 20px;
+    transition: 0.3s;
+  }
+
+
+
+
+
+/* 2.hover-filled-slide-up */
+.btn.hover-filled-slide-up::before {
+  top: 0; left: 0; right: 0;
+  height: 100%; width: 100%;
+}
+.btn.hover-filled-slide-up:hover::before {
+  height: 0%;
+}
+
+
+/*--- btn-2 ---*/
+.btn-2::before {
+  background-color: #00d4ff;
+  transition: 0.3s ease-out;
+}
+.btn-2 span {
+  color: #00d4ff;
+  border: 1px solid #00d4ff;
+  transition: 0.2s;
+  font-family: 'Barlow', sans-serif;
+  font-size: 18px;
+  line-height: 21px;
+}  
+.btn-2 span:hover {
+  color: black; 
+  transition: 0.2s 0.1s;
+}
+
+
+
+/* 7. hover-slide-up */
+.btn.hover-slide-up::before {
+  bottom: 0; left: 0; right: 0; 
+  height: 0%; width: 100%;
+}
+.btn.hover-slide-up:hover::before {
+  height: 100%;
+}
+
+
+/* 12. hover-border-2 */
+.btn.hover-border-2::before,
+.btn.hover-border-2::after {
+  width: 10%; height: 25%;
+  transition: 0.35s;
+}
+.btn.hover-border-2::before {
+  bottom: 0; left: 0;
+  border-left: 1px solid rgb(28, 31, 30);
+  border-bottom: 1px solid rgb(28, 31, 30);
+}
+.btn.hover-border-2::after {
+  top: 0; right: 0;
+  border-right: 1px solid rgb(28, 31, 30);
+  border-top: 1px solid rgb(28, 31, 30);
+}
+.btn.hover-border-2:hover::before,
+.btn.hover-border-2:hover::after {
+  width: 99%;
+  height: 99%;
+}

@@ -9,7 +9,7 @@ function Newsroom({ data }) {
         <div className=' bg-black Homepage'>
             <div className='absolute w-full max-w-full flex flex-col items-center bg-transparent' style={{ zIndex: '2', color: 'rgba(255, 255, 255, 0)', top: '0' }}>
                 <div className='w-full max-w-full pt-3 pb-3 ml-auto mr-auto' style={{ width: '79%' }}>
-                    <nav className=' w-full max-w-full justify-around items-center flex relative float-right font-use'>
+                    <nav className=' w-full max-w-full justify-around items-center flex relative float-right font-use nav-md'>
                         <Link to='/Solutions' className=' inline-block ml-6 mr-6 text-base align-top relative uppercase font-semibold hover-effect' style={{ maxWidth: '1200px', color: '#fff', letterSpacing: '2px', padding: '6px 0', lineHeight: '26.6px', textAlign: 'left', backgroundColor: 'rgba(255, 255, 255, 0)' }}>Solutions</Link>
                         <Link to='/Technology' className=' inline-block ml-6 mr-6 text-base align-top relative uppercase font-semibold hover-effect' style={{ maxWidth: '1200px', color: '#fff', letterSpacing: '2px', padding: '6px 0', lineHeight: '26.6px', textAlign: 'left', backgroundColor: 'rgba(255, 255, 255, 0)' }}>Technology</Link>
                         <Link to='/Partners' className=' inline-block ml-6 mr-6 text-base align-top relative uppercase font-semibold hover-effect' style={{ maxWidth: '1200px', color: '#fff', letterSpacing: '2px', padding: '6px 0', lineHeight: '26.6px', textAlign: 'left', backgroundColor: 'rgba(255, 255, 255, 0)' }}>Partners</Link>
@@ -21,9 +21,9 @@ function Newsroom({ data }) {
                                 <div className=' inline-block ml-6 mr-6 text-base align-top relative uppercase font-semibold' style={{ maxWidth: '1200px', color: '#fff', letterSpacing: '2px', padding: '6px 0', lineHeight: '26.6px', textAlign: 'left', backgroundColor: 'rgba(255, 255, 255, 0)' }}>Resources</div>
                             </div>
                             <nav className='navbartoggle'>
-                            <Link to='/Blogs' className='navlinks'>Blogs</Link>
+                                <Link to='/Blogs' className='navlinks'>Blogs</Link>
                                 <Link to='/Newsroom' className='navlinks'>Newsroom</Link>
-                                </nav>
+                            </nav>
                         </div>
                         <Link to='/Contact' className=' inline-block ml-6 mr-6 text-base align-top relative uppercase font-semibold hover-effect' style={{ maxWidth: '1200px', color: '#fff', letterSpacing: '2px', padding: '6px 0', lineHeight: '26.6px', textAlign: 'left', backgroundColor: 'rgba(255, 255, 255, 0)' }}>Contact</Link>
                     </nav>
@@ -189,6 +189,9 @@ function Newsroom({ data }) {
                             <div className='uppercase font-semibold font-use' style={{ color: 'rgba(255, 255, 255, .85) ', lineHeight: '48px', fontSize: '40px' }}>{strapiContent.footertitle}</div>
                             <p className=' text-xl leading-8 font-use-one' style={{ color: 'rgba(255, 255, 255, .85)', width: '441px', marginTop: '30px', marginBottom: '30px' }}>{strapiContent.content.data.content}</p>
                             {/* getintouchbutton */}
+                            <button class="btn btn-2 hover-slide-up uppercase">
+                                <span>{strapiContent.getintouch}</span>
+                            </button>
                             <div className='social-platform font-use'>
                                 <Link to="https://www.facebook.com/5cnetwork" className=' mt-6 mr-6 max-w-full inline-block uppercase text-lg' style={{ color: '#fff', backgroundColor: 'rgba(255, 255, 255, 0)', lineHeight: '26px' }}>
                                     <img src={strapiContent.sociallogo[0].localFile.url} alt='facebook' className='mr-0 max-w-full inline-block align-middle'></img>
@@ -270,6 +273,7 @@ query MyQuery {
             url
           }
         }
+        getintouch
       }
     }
   }

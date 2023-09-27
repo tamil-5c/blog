@@ -22,6 +22,7 @@ module.exports = {
           'contact',
           'user'
         ],
+        
         queryLimit: 1000,
       },
     },
