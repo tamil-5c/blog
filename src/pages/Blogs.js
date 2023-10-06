@@ -7,7 +7,7 @@ function Blogs({data}) {
 
   return (
     <div className=' bg-black Homepage'>
-            <div className='absolute w-full max-w-full flex flex-col items-center bg-transparent' style={{ zIndex: '2', color: 'rgba(255, 255, 255, 0)', top: '0' }}>
+            <div className='absolute w-full max-w-full flex flex-col items-center bg-transparent nav-division' style={{ zIndex: '2', color: 'rgba(255, 255, 255, 0)', top: '0' }}>
                 <div className='w-full max-w-full pt-3 pb-3 ml-auto mr-auto' style={{ width: '79%' }}>
                     <nav className=' w-full max-w-full justify-around items-center flex relative float-right font-use nav-md'>
                         <Link to='/Solutions' className=' inline-block ml-6 mr-6 text-base align-top relative uppercase font-semibold hover-effect' style={{ maxWidth: '1200px', color: '#fff', letterSpacing: '2px', padding: '6px 0', lineHeight: '26.6px', textAlign: 'left', backgroundColor: 'rgba(255, 255, 255, 0)' }}>Solutions</Link>
@@ -29,6 +29,31 @@ function Blogs({data}) {
                     </nav>
                 </div>
             </div>
+            {/* Mobile responsive */}
+<nav role="navigation" className='mobile-nav'>
+  <div id="menuToggle">
+    <input type="checkbox"/>
+    <span></span>
+    <span></span>
+    <span></span>
+    <ul id="menu">
+      <li><Link to="/Solutions">Solutions</Link></li>
+      <li><Link to="/Technology">Technology</Link></li>
+      <li><Link to="/Partners">Partners</Link></li>
+      <li><Link to="/">Prodigi</Link></li>
+      <li><Link to="/About">About</Link></li>
+      <li class="">
+        <div tabindex="0" class="onclick-menu">Resources
+          <ul class="onclick-menu-content">
+            <li><Link to="/Blogs">Blogs</Link></li>
+            <li><Link to="/Newsroom">Newsroom</Link></li>
+          </ul>
+        </div>
+      </li>
+      <li><Link to="/Contact" target="_blank">contact</Link></li>
+    </ul>
+  </div>
+</nav>
             <div>
                 <div className='max-w-full justify-center flex ml-auto mr-auto' style={{marginBottom:'60px'}}>
                     <div className='max-w-full relative mt-20' style={{width:'1000px'}}>
@@ -148,33 +173,33 @@ function Blogs({data}) {
                 </div>
             </div>
             {/* footer section */}
-        <div className='footer section'>
-                <div className='relative ml-auto mr-auto' style={{ maxWidth: '1200px' }}>
-                    <div className='flex justify-between items-start pb-0 pl-4 pr-4 mb-8' style={{ marginTop: '101px', border: '1px #7c4c4c', borderBottomColor: 'rgba(255, 255, 255, .5)' }}>
+            <div className='footer section pl-0 pr-0'>
+                <div className='relative ml-auto mr-auto max-w-[1200px]'>
+                    <div className='flex justify-between items-start pb-0 pl-4 pr-4 mb-8 mt-[101px] sm:flex-col sm:mt-50px ' style={{border: '1px #7c4c4c', borderBottomColor: 'rgba(255, 255, 255, .5)' }}>
                         <div className='flex flex-col items-start'>
-                            <div className='uppercase font-semibold font-use' style={{ color: 'rgba(255, 255, 255, .85) ', lineHeight: '48px', fontSize: '40px' }}>{strapiContent.footertitle}</div>
-                            <p className=' text-xl leading-8 font-use-one' style={{ color: 'rgba(255, 255, 255, .85)', width: '441px', marginTop: '30px', marginBottom: '30px' }}>{strapiContent.content.data.content}</p>
+                            <div className='uppercase font-semibold font-use leading-[48px] text-[40px]' style={{ color: 'rgba(255, 255, 255, .85) '}}>{strapiContent.footertitle}</div>
+                            <p className=' text-xl leading-8 font-use-one w-[441px] mt-[30px] mb-[30px] sm:w-[100%] sm:text-lg' style={{ color: 'rgba(255, 255, 255, .85)'}}>{strapiContent.content.data.content}</p>
                             {/* getintouchbutton */}
-                            <button class="btn btn-2 hover-slide-up uppercase">
-                <span>{strapiContent.getintouch}</span>
-              </button>
-                            <div className='social-platform font-use'>
+                            <button className="btn btn-2 hover-slide-up sm:w-[100%]">
+                                <span>{strapiContent.getintouch}</span>
+                            </button>
+                            <div className='social-platform font-use sm:w-[100%]'>
                                 <Link to="https://www.facebook.com/5cnetwork" className=' mt-6 mr-6 max-w-full inline-block uppercase text-lg' style={{ color: '#fff', backgroundColor: 'rgba(255, 255, 255, 0)', lineHeight: '26px' }}>
                                     <img src={strapiContent.sociallogo[0].localFile.url} alt='facebook' className='mr-0 max-w-full inline-block align-middle'></img>
                                 </Link>
                                 <Link to="https://www.linkedin.com/company/5c-network?trk=top_nav_home" className=' mt-6 mr-6 max-w-full inline-block uppercase text-lg' style={{ color: '#fff', backgroundColor: 'rgba(255, 255, 255, 0)', lineHeight: '26px' }}>
-                                    <img src={strapiContent.sociallogo[3].localFile.url} alt='Linkedin' className='mr-0 max-w-full inline-block align-middle'></img>
+                                    <img src={strapiContent.sociallogo[2].localFile.url} alt='Linkedin' className='mr-0 max-w-full inline-block align-middle'></img>
                                 </Link>
                                 <Link to="https://twitter.com/5c_network" className=' mt-6 mr-6 max-w-full inline-block uppercase text-lg' style={{ color: '#fff', backgroundColor: 'rgba(255, 255, 255, 0)', lineHeight: '26px' }}>
                                     <img src={strapiContent.sociallogo[1].localFile.url} alt='Twitter' className='mr-0 max-w-full inline-block align-middle'></img>
                                 </Link>
                                 <Link to="https://medium.com/pixxel-labs" className=' mt-6 mr-6 max-w-full inline-block uppercase text-lg' style={{ color: '#fff', backgroundColor: 'rgba(255, 255, 255, 0)', lineHeight: '26px' }}>
-                                    <img src={strapiContent.sociallogo[2].localFile.url} alt='Medium' className='mr-0 max-w-full inline-block align-middle'></img>
+                                    <img src={strapiContent.sociallogo[3].localFile.url} alt='Medium' className='mr-0 max-w-full inline-block align-middle'></img>
                                 </Link>
                             </div>
                         </div>
-                        <div className='flex'>
-                            <div className='flex flex-col font-use' style={{ marginLeft: '60px' }}>
+                        <div className='flex sm:mt-[65px] sm:w-[100%] sm:justify-between'>
+                            <div className='flex flex-col font-use ml-[60px] sm:ml-[5px]'>
                                 <Link to="#" className='uppercase mb-4 text-sm leading-5 font-semibold' style={{ color: 'rgba(255, 255, 255, .85)', letterSpacing: '2px', backgroundColor: 'rgba(255, 255, 255, 0)' }}>about</Link>
                                 <Link to="#" className='uppercase mb-4 text-sm leading-5 font-semibold' style={{ color: 'rgba(255, 255, 255, .85)', letterSpacing: '2px', backgroundColor: 'rgba(255, 255, 255, 0)' }}>solutions</Link>
                                 <Link to="#" className='uppercase mb-4 text-sm leading-5 font-semibold' style={{ color: 'rgba(255, 255, 255, .85)', letterSpacing: '2px', backgroundColor: 'rgba(255, 255, 255, 0)' }}>Technology</Link>
@@ -184,7 +209,7 @@ function Blogs({data}) {
                                 <Link to="#" className='uppercase mb-4 text-sm leading-5 font-semibold' style={{ color: 'rgba(255, 255, 255, .85)', letterSpacing: '2px', backgroundColor: 'rgba(255, 255, 255, 0)' }}>annual returns</Link>
 
                             </div>
-                            <div className='flex flex-col font-use' style={{ marginLeft: '60px' }}>
+                            <div className='flex flex-col font-use ml-[60px]'>
                                 <Link to="#" className='uppercase mb-4 text-sm leading-5 font-semibold' style={{ color: 'rgba(255, 255, 255, .85)', letterSpacing: '2px', backgroundColor: 'rgba(255, 255, 255, 0)' }}>vision</Link>
                                 <Link to="#" className='uppercase mb-4 text-sm leading-5 font-semibold' style={{ color: 'rgba(255, 255, 255, .85)', letterSpacing: '2px', backgroundColor: 'rgba(255, 255, 255, 0)' }}>carrers</Link>
                                 <Link to="#" className='uppercase mb-4 text-sm leading-5 font-semibold' style={{ color: 'rgba(255, 255, 255, .85)', letterSpacing: '2px', backgroundColor: 'rgba(255, 255, 255, 0)' }}>contact</Link>
