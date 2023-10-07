@@ -50,6 +50,7 @@ function Blogs({data}) {
           </ul>
         </div>
       </li>
+      <li><Link to="/Carrers">Careers</Link></li>
       <li><Link to="/Contact" target="_blank">contact</Link></li>
     </ul>
   </div>

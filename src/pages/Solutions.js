@@ -52,15 +52,16 @@ function Solutions({ data }) {
           </ul>
         </div>
       </li>
+      <li><Link to="/Carrers">Careers</Link></li>
       <li><Link to="/Contact" target="_blank">contact</Link></li>
     </ul>
   </div>
 </nav>
 {/* hero section */}
-      <div className=' h-screen justify-start flex flex-col items-center bg-no-repeat lg:mb-[125px] homepage-solution' style={{backgroundImage: `url(${strapiContent.solutionHomepage.localFile.url})`}}>
+      <div className=' h-screen justify-start flex flex-col items-center bg-no-repeat mb-[125px] homepage-solution' style={{backgroundImage: `url(${strapiContent.solutionHomepage.localFile.url})`}}>
 
         <div className='max-w-full ml-auto mr-auto'>
-          <div className='max-w-full relative w-[1200px] mt-[234px] hero-section-solution'>
+          <div className='max-w-full relative w-[1200px] mt-[234px] sm:h-auto sm:mt-0 hero-section-solution'>
             <h1 className='max-w-full uppercase mt-0 mb-0 font-normal text-[#fff] tracking-[2px] text-[80px] leading-[100px] font-use solution-title'>{strapiContent.title}</h1>
             <div className='max-w-full mt-8 w-[500px] ml-[100px] content-solution-container'>
               <p className='mb-0 mt-0 font-use-one text-xl text-[#ffffffd6] content-solution'>{strapiContent.content.data.content}</p>

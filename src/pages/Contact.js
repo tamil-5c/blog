@@ -50,16 +50,17 @@ function Contact({ data }) {
           </ul>
         </div>
       </li>
+      <li><Link to="/Carrers">Careers</Link></li>
       <li><Link to="/Contact" target="_blank">contact</Link></li>
     </ul>
   </div>
 </nav>
             <div className='Contact-page' style={{ backgroundImage: `url(${strapiContent.contactimg.localFile.url})` }}>
-                <div className='max-w-full ml-auto mr-auto'>
-                    <div className='max-w-full relative mt-[234px] w-[1200px] sm:mt-28'>
+                <div className='max-w-full ml-auto mr-auto sm:w-full'>
+                    <div className='max-w-full relative mt-[234px] w-[1200px] sm:w-full sm:mt-28'>
                         <h1 className=' uppercase max-w-full mt-0 mb-0 font-semibold font-use text-[#fff] tracking-[2px] leading-[100px] sm:ml-1 text-[80px] sm:text-[2.5rem]'>{strapiContent.title}</h1>
-                        <div className=' max-w-full mt-8 text-[#fff] w-[500px] ml-[100px] sm:ml-[10px] sm:mt-0  sm:w-[85%]'>
-                            <p className=' mt-0 mb-0 leading-8 font-use-one font-semibold sm:text-xl text-[20px]' style={{color: 'rgba(255, 255, 255, .85)' }}>{strapiContent.titlecontent.data.titlecontent}</p>
+                        <div className=' max-w-full mt-8 text-[#fff] w-[500px] ml-[100px] sm:ml-[10px] sm:mt-0  sm:w-full'>
+                            <p className=' mt-0 mb-0 leading-8 font-use-one font-medium sm:text-xl text-[20px] sm:w-[98%]' style={{color: 'rgba(255, 255, 255, .85)' }}>{strapiContent.titlecontent.data.titlecontent}</p>
                         </div>
                     </div>
                 </div>
@@ -102,18 +103,18 @@ function Contact({ data }) {
                     </div>
                 </div>
             </div>
-            <div className='mt-[220px] mb-[200px] sm:mt-28' >
-                <div className='relative flex flex-col items-start ml-auto mr-auto' style={{ zIndex: '1', maxWidth: '1200px' }}>
+            <div className='mt-[220px] mb-[200px] sm:mt-28 sm:max-w-full sm:w-full' >
+                <div className='relative flex flex-col items-start ml-auto mr-auto max-w-[1200px] z-[1] sm:max-w-full sm:w-full'>
                     <h2 className='uppercase mt-0 mb-0 font-semibold  font-use text-[#fff] tracking-[2px] text-[50px] leading-[60px] sm:ml-[10px] sm:text-[22px] sm:tracking-[1px]'>{strapiContent.loctitle}</h2>
                     <h2 className='max-w-full uppercase mt-0 mb-0 font-semibold font-use text-[#fff] text-[80px] tracking-[2px] leading-[100px] sm:tracking-[1px] sm:text-[38px] sm:leading-[50px] sm:ml-[10px]'>{strapiContent.locsubtitle}</h2>
                     <div className='flex mt-20 justify-between w-[1020px] ml-[100px] sm:flex-col sm:ml-[10px] sm:w-full'>
-                        <div className='w-auto flex sm:mb-14'>
+                        <div className='w-auto flex sm:mb-14 sm:max-w-[98%] sm:w-full'>
                             <div>
                                 <img src={strapiContent.locationlogo.localFile.url} className='max-w-full inline-block align-middle' style={{ width: '50px', height: '50px' }}></img>
                             </div>
                             <div className='w-auto max-w-full'>
-                                <div className='uppercase' style={{ letterSpacing: '2px', fontSize: '40px', lineHeight: '48px', color: '#fff' }}>{strapiContent.locations[0].country}</div>
-                                <p className=' mt-3 mb-0 leading-8 font-use-one' style={{ color: 'rgba(255, 255, 255, .85)', fontSize: '20px' }}>
+                                <div className='uppercase text-[40px] sm:text-[20px]' style={{ letterSpacing: '2px', lineHeight: '48px', color: '#fff' }}>{strapiContent.locations[0].country}</div>
+                                <p className=' mt-3 mb-0 leading-8 font-use-one text-[20px] sm:text-[18px]' style={{ color: 'rgba(255, 255, 255, .85)' }}>
                                     <div dangerouslySetInnerHTML={{ __html: strapiContent.locations[0].address.data.address }}></div>
                                 </p>
                             </div>
@@ -123,8 +124,8 @@ function Contact({ data }) {
                                 <img src={strapiContent.locationlogo.localFile.url} className='max-w-full inline-block align-middle' style={{ width: '50px', height: '50px' }}></img>
                             </div>
                             <div className='w-auto max-w-full'>
-                                <div className='uppercase' style={{ letterSpacing: '2px', fontSize: '40px', lineHeight: '48px', color: '#fff' }}>{strapiContent.locations[1].country}</div>
-                                <p className=' mt-3 mb-0 leading-8 font-use-one' style={{ color: 'rgba(255, 255, 255, .85)', fontSize: '20px' }}>
+                                <div className='uppercase text-[40px] sm:text-[20px]' style={{ letterSpacing: '2px', lineHeight: '48px', color: '#fff' }}>{strapiContent.locations[1].country}</div>
+                                <p className=' mt-3 mb-0 leading-8 font-use-one text-[20px] sm:text-[18px]' style={{ color: 'rgba(255, 255, 255, .85)' }}>
                                     <div dangerouslySetInnerHTML={{ __html: strapiContent.locations[1].address.data.address }}></div>
                                 </p>
                             </div>

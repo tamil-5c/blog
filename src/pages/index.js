@@ -51,6 +51,7 @@ const index = ({ data }) => {
                 </ul>
               </div>
             </li>
+            <li><Link to="/Carrers">Careers</Link></li>
             <li><Link to="/Contact" target="_blank">contact</Link></li>
           </ul>
         </div>
@@ -68,26 +69,26 @@ const index = ({ data }) => {
       </div>
       {/* unseen-container */}
       <div className='relative flex flex-col justify-center w-full items-center overflow-hidden unseen-container'>
-        <div className='relative mr-auto ml-auto ' style={{ maxWidth: '1200px' }}>
-          <div className='relative flex flex-col pl-4 pr-4 max-w-full z-10   second-content'>
+        <div className='relative mr-auto ml-auto max-w-[1200px] sm:max-w-full sm:w-full'>
+          <div className='relative flex flex-col max-w-full z-10   second-content'>
             <div>
               <h2 className='text-slate-50 uppercase text-5xl mt-0 mb-0 font-semibold tracking-[2px] text-[50px] leading-[60px] sm:ml-0 sm:text-[22px] sm:tracking-[1px]'>{content.unseentitle}</h2>
               <h1 className='text-slate-50 uppercase  max-w-full font-semibold mt-0 mb-0  text-[80px] tracking-[2px] leading-[80px] sm:text-[2.5rem] sm:leading-[50px] sm:ml-0'>{content.unseensubtitle}</h1>
             </div>
 
-            <div className='max-w-full flex flex-col justify-center items-start sm:ml-0  secondDivContent sm:w-[36%] '>
-              <div className='max-w-full mt-10  container-content sm:w-[90%]'>
+            <div className='max-w-full flex flex-col justify-center items-start sm:ml-0  secondDivContent '>
+              <div className='max-w-full mt-10  container-content'>
                 <p className='text-xl leading-8 mb-0 secondDivParaContent sm:text-lg'>
                   <div dangerouslySetInnerHTML={{ __html: content.unseencontent.data.unseencontent }}></div>
                 </p>
               </div>
-              <button class="btn btn-2 hover-slide-up mt-7 uppercase">
+              <button class="btn btn-2 hover-slide-up mt-7 uppercase sm:w-full">
                 <span>{content.moreAboutUs}</span>
               </button>
             </div>
-            <div className='flex flex-col justify-around items-center absolute top-0 bottom-0 left-auto right-[-34%] sm:w-[80%] sm:justify-start sm:items-start sm:mt-[33px] sm:relative sm:right-0'>
+            <div className='flex flex-col justify-around items-center absolute top-0 bottom-0 left-auto right-[-34%] sm:justify-start sm:items-start sm:mt-[33px] sm:relative sm:right-0'>
               <div className='relative'>
-                <img src={content.unseenimg.localFile.url} onError={(e) => console.error('Image load error', e)} className=' h-auto inline-block align-middle w-[700px] sm:w-[44%]  rotation-effect' alt='globeimage' />
+                <img src={content.unseenimg.localFile.url} onError={(e) => console.error('Image load error', e)} className=' h-auto inline-block align-middle w-[700px] sm:w-full  rotation-effect' alt='globeimage' />
                 {/* <img src={content.unseenimg.localFile.url} className='max-w-full align-middle object-cover ' style={{ width: '264px', height: '171px', display: 'none', top: '456px', bottom: '0', left: '247px' }}></img> */}
               </div>
             </div>
@@ -127,7 +128,7 @@ const index = ({ data }) => {
               <p className='font-normal mb-0 mt-0 text-xl hyper-content text-slate-50 leading-[32px] w-[72%] sm:leading-[28px] sm:text-lg sm:w-full' >
                 <div dangerouslySetInnerHTML={{ __html: content.thirdseccontent.data.thirdseccontent }}></div>
               </p>
-              <div className=' mt-20 w-[900px]'>
+              <div className=' mt-20 w-[900px] sm:w-full'>
                 <div className='grid icons-grid'>
                   <div className='flex flex-col items-start justify-between'>
                     <div className='flex flex-col items-center'>
@@ -224,7 +225,7 @@ const index = ({ data }) => {
           <div>
             <h1 className='max-w-full uppercase mt-0 mb-0 font-semibold text-[#fff] font-use tracking-[2px] text-[50px] leading-[60px] sm:leading-10 sm:ml-0 sm:text-[34px] sm:tracking-[1px]'> {content.fifthsubtitle}</h1>
           </div>
-          <div className='max-w-full mt-20 relative ml-[100px] w-[1000px] sm:ml-[10px] sm:mt-10'>
+          <div className='max-w-full mt-20 relative ml-[100px] w-[1000px] sm:ml-0 sm:mt-10'>
             <div className='mb-10'>
               <p className='text-center text-xl mb-0 mt-0 font-use-one sm:text-lg' style={{ color: 'rgba(255, 255, 255, .85)', lineHeight: '38px' }}>{content.fifthcontent.data.fifthcontent}</p>
             </div>
@@ -263,7 +264,7 @@ const index = ({ data }) => {
       </div>
       {/* seventh division */}
       <div className='flex flex-col items-center justify-center m-0 pt-60 overflow-hidden'>
-        <div className='flex flex-col relative w-[900px] sm:max-w-full'>
+        <div className='flex flex-col relative w-[900px] sm:max-w-full sm:w-full'>
           <div className='flex pl-0' style={{ borderLeft: '8px #00d4ff' }}>
             <div className='side-line-effects'></div>
             <div className='quote'>
@@ -271,12 +272,12 @@ const index = ({ data }) => {
               <div className='uppercase mt-4 not-italic leading-10 font-use-one text-[#fff] font-use tracking-[2px] text-[50px] sm:leading-10 sm:ml-0 sm:text-[18px] sm:tracking-[1px]'>-{content.author}</div>
             </div>
           </div>
-          <div className='max-w-full flex flex-col items-start ml-[140px] sm:ml-3 w-[670px] sm:w-[96%] mt-[60px]'>
+          <div className='max-w-full flex flex-col items-start ml-[140px] sm:ml-3 w-[670px] sm:max-w-full sm:w-[95%] mt-[60px]'>
             <p className=' text-xl leading-8 mb-0 mt-0 font-use-one' style={{ color: 'rgba(255, 255, 255, .85)' }}>
               <div dangerouslySetInnerHTML={{ __html: content.quotecontent.data.quotecontent }}></div>
             </p>
-            <div className=' mt-10 sm:max-w-full'>
-              <button class="btn btn-2 hover-slide-up uppercase sm:min-w-[128%]">
+            <div className=' mt-10 sm:max-w-full sm:w-full'>
+              <button class="btn btn-2 hover-slide-up uppercase sm:max-w-full sm:w-full">
                 <span>{content.futureWith}</span>
               </button>
             </div>
